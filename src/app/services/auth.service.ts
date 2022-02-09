@@ -11,6 +11,14 @@ export class AuthService {
   firebaseData: FirebaseAuthData;
   constructor(private http: HttpClient) {}
 
+  isAuthenticated(): boolean {
+    if (this.firebaseData) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   signup(email: string, password: string) {
     return this.http
       .post<FirebaseAuthData>(
