@@ -4,4 +4,5 @@ export default interface FirebaseAuthData {
   refreshToken: string;
   expiresIn: string;
   localId: string;
+  registered?: boolean;
 }
